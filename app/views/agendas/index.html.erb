@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: "Tahoma", sans-serif }
+
+.colorLink {
+  color: #5196BD;
+}
+
+.month {
+  padding: 20px 25px;
+  width: 950px;
+  height: 70px;
+  background: #FF5733 ;
+  text-align: center;
+  font-family: AM;
+  font-size:13px;
+  border-radius: 10px;
+}
+
+.month ul {
+  margin: 1;
+  padding: 0;
+}
+
+.month ul li {
+  color: black;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  border-radius: 6px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  width: 950px;
+  height: 55px;
+  padding: 15px 0;
+  background-color:#FA9B65 ;
+  border-radius: 10px;
+  font-family: monospace bold;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 30px 0;
+  width: 950px;
+  height: 370px;
+  background: #40998E;
+  margin: 0;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+.hoja2
+{
+  
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size:12px;
+  font-family: Arial Black;
+  color: black;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white
+}
+.btn btn-outline-dark
+{
+  border-color:none;
+}
+
+(max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+(max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+(max-width: 290px) {
+  .weekdays li, .days li {width: 12.2;}
+}
+.bgcolor
+{
+  background: #C2F3ED;
+}
+
+</style>
+</head>
+<body class="bgcolor">
+<p></p>
+<center>
+<div class=".hoja2">
+<center>
+<div class="month">
+  <ul>
+    <li><font color="black">
+     -- DICIEMBRE 2021 -- </span>
+      </font>
+    </li>
+  </ul>
+</div>
+</center>
+
+<ul class="weekdays">
+  <li><font color="black"><b>L</b></font></li>
+  <li><font color="black"><b>M</b></font></li>
+  <li><font color="black"><b>M</b></font></li>
+  <li><font color="black"><b>J</b></font></li>
+  <li><font color="black"><b>V</b></font></li>
+  <li><font color="black"><b>S</b></font></li>
+  <li><font color="black"><b>D</b></font></li>
+</ul>
+
+<ul class="days">
+
+  <li>29</li>
+  <li>30</li>
+  <% @agendas.each do |agenda| %>
+  <li>
+  <font color="black">
+    <%= link_to agenda.day, agenda, class: "colorLink", class: "btn btn-light" %>
+    </font>
+    </li>
+<% end %>
+<li>01</li>
+<li>02</li>
+<li>03</li>
+<li>04</li>
+<li>05</li>
+<li>06</li>
+<li>07</li>
+<li>08</li>
+<li>09</li>
+<li>10</li>
+<li>11</li>
+<li>12</li>
+<li>13</li>
+<li>14</li>
+<li>15</li>
+<li>16</li>
+<li>17</li>
+<li>18</li>
+<li>19</li>
+<li>20</li>
+<li>21</li>
+<li>22</li>
+<li>23</li>
+<li>24</li>
+<li>25</li>
+<li>26</li> 
+
+
+
+
+<!--<%= link_to "New Day", new_agenda_path %>-->
+</div>
+</body>
+</html>
